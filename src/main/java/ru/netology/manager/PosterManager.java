@@ -12,6 +12,10 @@ public class PosterManager {
     private Film[] films = new Film[0];
     private int filmsQuantity = 10;
 
+    public PosterManager(int filmsQuantity) {
+        this.filmsQuantity = filmsQuantity;
+    }
+
     public void save(Film film) {
         int length = films.length + 1;
         Film[] tmp = new Film[length];
