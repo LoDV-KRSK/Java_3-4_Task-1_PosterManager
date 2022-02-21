@@ -37,7 +37,7 @@ public class PosterManager {
 
         Film[] result = new Film[resultLength];
         for (int i = 0; i < resultLength; i++) {
-            int index = resultLength - i - 1;
+            int index = films.length - i - 1;
             result[i] = films[index];
         }
         return result;

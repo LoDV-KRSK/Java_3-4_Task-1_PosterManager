@@ -121,7 +121,7 @@ class PosterManagerTest {
         manager.save(tenth);
         manager.save(eleventh);
 
-        Film[] expected = {tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second, first};
+        Film[] expected = {eleventh, tenth, ninth, eighth, seventh, sixth, fifth, fourth, third, second};
         Film[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
@@ -141,7 +141,7 @@ class PosterManagerTest {
         manager.save(fourth);
         manager.save(fifth);
 
-        Film[] expected = {third, second, first};
+        Film[] expected = {fifth, fourth, third};
         Film[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
@@ -168,5 +168,4 @@ class PosterManagerTest {
         Film[] actual = manager.findLast();
         assertArrayEquals(expected, actual);
     }
-
 }
